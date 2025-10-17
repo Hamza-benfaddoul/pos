@@ -2,6 +2,7 @@
 all: build up
 
 up:
+	mkdir -p apps/frontend/node_modules apps/backend/node_modules
 	docker compose up -d
 
 down:
