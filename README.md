@@ -1,18 +1,5 @@
 # POS System for restaurants
 
-## description
-
-This is a Point of Sale (POS) system designed for restaurants to manage orders,
-The system provides an intuitive interface for cashiers to take orders, process payments, and manage tables efficiently.
-
-## Features
-
-- Order Management: Create, update, and track customer orders.
-- Table Management: Assign orders to specific tables and manage table status.
-- User Management: Manage staff accounts and permissions.
-- Payment Processing: Integrate with payment gateways for seamless transactions.
-- Multi-Device Support: Access the POS system from various devices including tablets and smartphones.
-
 ## Technologies Used
 
 - Frontend: React.js,
