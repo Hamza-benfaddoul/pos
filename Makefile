@@ -2,30 +2,33 @@
 all: build up
 
 up:
-	docker-compose up -d
+	docker compose up -d
 
 down:
-	docker-compose down
+	docker compose down
 
 build:
-	docker-compose build
+	docker compose build
+
+logs:
+	docker-compose logs -f
 
 # Backend
 backend-logs:
-	docker-compose logs backend -f
+	docker compose logs backend -f
 
 backend-shell:
-	docker-compose exec backend sh
+	docker compose exec backend sh
 
 # Frontend
 frontend-logs:
-	docker-compose logs frontend
+	docker compose logs frontend -f
 frontend-shell:
-	docker-compose exec frontend sh
+	docker compose exec frontend sh
 
 # Database
 db-logs:
-	docker-compose logs postgres
+	docker compose logs postgres
 
 db-shell:
-	docker-compose exec postgres psql -U postgres -d myapp
+	docker compose exec postgres psql -U postgres -d myapp

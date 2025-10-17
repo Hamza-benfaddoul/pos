@@ -61,11 +61,29 @@ services:
     networks:
       - pos-network
 
+  adminer:
+    image: adminer
+    container_name: pos_adminer
+    networks:
+      - pos-network
+    ports:
+      - 8081:8080
+
 volumes:
   postgres_data:
   backend_node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./apps/backend/node_modules/
+
   frontend_node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./apps/frontend/node_modules/
 
 networks:
   pos-network:
-    driver: bridge
